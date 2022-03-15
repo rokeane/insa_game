@@ -42,11 +42,15 @@ public class INSA {
 
         canteen.getTime(answer);
 
+				System.out.println("--------------------\nPress Enter to continue");
+				try{System.in.read();}
+	        catch(Exception e){}
+
         System.out.println("Step 1: Entrées\n");
         System.out.println("Select as many entrées as you wish but choose wisely:\n");
         System.out.println("1.Bread\n2.Tray of Eggs\n3.Cheese\n4.Couscous\n5.Sardines\n6.Quiche (Chaud)\n7.Soupe (Chaud)\n8.Coleslaw\n9.Move on");
 
-        //int choice_entree = keyboard.nextInt();
+
 
         int entrees = 0;
 
@@ -55,11 +59,15 @@ public class INSA {
           canteen.Entree(choice_entree);
           entrees++;
           if (choice_entree == 9){
+					entrees--;
           break;
           }
         }
       System.out.println("Ooh la la! You have taken "+entrees+" Entrees");
       System.out.println("Score: "+canteen.getScore());
+			System.out.println("--------------------\nPress Enter to continue");
+			try{System.in.read();}
+        catch(Exception e){}
       System.out.println("\nStep 2: Deserts\n");
       System.out.println("Select as many deserts as you wish but choose wisely:\n");
       System.out.println("1.Fruit\n2.Creme Brulee\n3.Donut\n4.Yoghurt\n5.Fruit salad\n6.Move on");
@@ -73,12 +81,16 @@ public class INSA {
         canteen.Desert(choice_desert);
         deserts++;
         if (choice_desert == 6){
+				deserts--;	
         break;
         }
       }
 
       System.out.println("Ooh la la! You have taken "+deserts+" Deserts");
       System.out.println("Score: "+canteen.getScore());
+			System.out.println("--------------------\nPress Enter to continue");
+			try{System.in.read();}
+        catch(Exception e){}
       System.out.println("\n\nStep 3: Mains\n");
       System.out.println("Select as many mains as you wish, if you're brave enough:\n");
       System.out.println("1.Tasteless Pasta\n2.Overcooked Fish\n3.Dry chicken\n4.Cassoulet\n5.Move on");
@@ -109,6 +121,10 @@ public class INSA {
 
       int response = keyboard.nextInt();
       canteen.Cashier(response);
+
+			System.out.println("--------------------\nPress Enter to find out your result");
+			try{System.in.read();}
+        catch(Exception e){}
 
       if (canteen.getScore()>25){
         System.out.println(" \nATTENDS! ATTENDS! ATTENDS! ATTENDS! ATTENDS! ATTENDS! \n");
