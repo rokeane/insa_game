@@ -151,23 +151,23 @@ public class Canteen {
 
         switch(response) {
           case 1:
-          System.out.println("Looking suspicious");
+          System.out.println("\nLooking suspicious");
           score += 2;
           break;
           case 2:
-          System.out.println("A bit creepy but ok");
+          System.out.println("\nA bit creepy but ok");
           score += 1;
           break;
           case 3:
-          System.out.println("Nice, nothing unusual here");
+          System.out.println("\nNice, nothing unusual here");
 
           break;
           case 4:
-          System.out.println("Very Good, Divert them away from looking at your tray");
+          System.out.println("\nVery Good, Divert them away from looking at your tray");
           break;
 
           default:
-          System.out.println("Please try again. It's not that hard to get it right");
+          System.out.println("Uh oh, you dropped your card on the floor\nPerhaps your tray is too heavy with food says the cashier");
         }
       }
 
